@@ -9,9 +9,10 @@ public class Fibonacci {
 		Scanner scan = new Scanner(System.in);
 		int series = scan.nextInt();
 		Fibonacci fib = new Fibonacci();
-		for (int i = 1; i <= series; i++) {
-			System.out.print(fib.getFibSeries(i) + " ");
-		}
+		
+		int	fibValue=fib.getFibSeries(series);
+		System.out.print(fibValue+" ");
+		
 
 	}
 
@@ -25,8 +26,10 @@ public class Fibonacci {
 			fib = 1;
 			return fib;
 		} else {
-			fib = getFibSeries(series - 2) + getFibSeries(series - 1);
+			fib = getFibSeries(series - 1) + getFibSeries(series - 2);
+			
 		}
+		
 		return fib;
 
 	}
